@@ -3,11 +3,11 @@
 A simple web application that predicts earthquake alert severity based on input parameters and displays dataset previews with chart visualization.
 
 ## 🚀 Live Demo
- **https://earthquake-predictor-one.vercel.app**
+**https://ai-impact-sense-czqc.vercel.app/**
 
 ---
-backed=nd url:"https://ai-impactsense-8.onrender.com"
-frontend url:"https://earthquake-predictor-one.vercel.app"
+backed=nd url:"https://ai-impactsense-9.onrender.com"
+frontend url:"https://ai-impact-sense-czqc.vercel.app"
 ## ✨ Features
 - Toggle between **sliders** and **input boxes** for flexible parameter entry.
 - Predict earthquake alert severity using a **live backend API**.
