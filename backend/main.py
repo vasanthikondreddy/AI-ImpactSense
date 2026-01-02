@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
+import joblib   # for loading the saved model
 
 app = FastAPI()
 
@@ -15,14 +15,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load your existing dataset
+# Load dataset for preview
 df = pd.read_csv("earthquake_alert_balanced_dataset.csv")
 
-# Train Decision Tree model once at startup
-X = df[["magnitude", "depth", "cdi", "mmi", "sig"]]
-y = df["alert"]
-model = DecisionTreeClassifier()
-model.fit(X, y)
+# Load pre-trained Decision Tree model
+model = joblib.load("model.pkl")
 
 # Input schema
 class InputData(BaseModel):
