@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report
 
@@ -27,17 +27,20 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# 5. Define models
+# 5. Define models (including boosting)
 models = {
     "Logistic Regression": LogisticRegression(max_iter=1000),
     "Decision Tree": DecisionTreeClassifier(random_state=42),
     "Random Forest": RandomForestClassifier(n_estimators=100, random_state=42),
-    "SVM": SVC()
+    "SVM": SVC(),
+    "AdaBoost": AdaBoostClassifier(n_estimators=100, random_state=42),
+    "Gradient Boosting": GradientBoostingClassifier(n_estimators=100, random_state=42)
 }
 
 # 6. Train and evaluate each model
 best_model = None
 best_accuracy = 0
+best_model_name = ""
 
 for name, model in models.items():
     model.fit(X_train, y_train)
