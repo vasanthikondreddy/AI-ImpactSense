@@ -3,11 +3,11 @@
 A simple web application that predicts earthquake alert severity based on input parameters and displays dataset previews with chart visualization.
 
 ## 🚀 Live Demo
- **https://ai-impact-sense.vercel.app/**
+ **https://ai-impact-sense-3pyi.vercel.app/dashboard**
 
 ---
-backed=nd url:"https://ai-impactsense-12.onrender.com"
-frontend url:"https://ai-impact-sense.vercel.app/"
+backed=nd url:"https://ai-impactsense-13.onrender.com"
+frontend url:"https://ai-impact-sense-3pyi.vercel.app/dashboard/"
 ## ✨ Features
 - Toggle between **sliders** and **input boxes** for flexible parameter entry.
 - Predict earthquake alert severity using a **live backend API**.
@@ -32,6 +32,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/vasanthikondreddy/AI-ImpactSense.git
 cd AI-ImpactSense/frontend
 npm install
+
 
 
 
